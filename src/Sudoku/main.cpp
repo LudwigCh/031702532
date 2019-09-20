@@ -9,9 +9,16 @@ int main(int argc, char* argv[])
 	num = atoi(argv[4]);
 	string file_in = argv[6];
 	Read rd;
-	//rd.read_judge(int argc, char* argv[]);
-	rd.read_init(dimension, num,file_in);
+	rd.read_judge(argc, argv);
+	int jj = num;
+	while (jj--)
+	{
+		rd.read_init(dimension, num, file_in);
+		rd.equal(dimension);
+		rd.DFS(0);
+		rd.output();
+	}
 	
+	return 0;
 
-	//printf("%d %d", dimension,num);
 }

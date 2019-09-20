@@ -115,8 +115,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Read.cpp" />
-    <ClCompile Include="源.cpp" />
+    <ClCompile Include="Read_Write.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Read.h" />
