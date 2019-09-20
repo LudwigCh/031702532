@@ -6,13 +6,16 @@ using namespace std;
 class Read {
 public:
 	void read_judge(int argc,char* argv[]);
-	void read_init(int dimension, int num,string file_in);
 	void DFS(int n);
 	bool Check(int m, int key);
-	int dimension;
-	void equal(int dimen);
-	void output();
-	int temp[9][9];
+	void input(int dimension, int num, string file_in);
+	void equal(int dimension);
+	void output(string file_out,int num);
+	void add();
+
+	int count = 0;
+	int dimen;
+	int temp[100][9][9];
 };
 #endif
 
