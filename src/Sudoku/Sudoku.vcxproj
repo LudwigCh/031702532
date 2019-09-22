@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{2340EC49-B249-48FA-AF06-9F4AFAC46E2F}</ProjectGuid>
-    <RootNamespace>Project1</RootNamespace>
+    <ProjectGuid>{DB3600E4-3FE0-4EAC-8CA2-EBCCD256C368}</ProjectGuid>
+    <RootNamespace>Sudoku</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -84,6 +84,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>Read.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>Read.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -115,11 +118,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Read_Write.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClInclude Include="..\..\Project1\Project1\Read.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Read.h" />
+    <ClCompile Include="..\..\Project1\Project1\main.cpp" />
+    <ClCompile Include="..\..\Project1\Project1\Read.cpp" />
+    <ClCompile Include="..\..\Project1\Project1\Read_Write.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

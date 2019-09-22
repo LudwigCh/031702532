@@ -1,3 +1,4 @@
+
 #include "Read.h"
 #include<string>
 #include<cstring>
@@ -5,12 +6,28 @@
 #include<iostream>
 #include<fstream>
 #include<cmath>
+using namespace std;
 bool sign;
 //Sudoku.exe -m 9 -n 2 -i input.txt -o output.txt
 //argv[0]=filename
-void Read::read_judge(int argc, char* argv[]) 
+int Read::read_judge(int argc, char* argv[]) 
 {
-	
+	if (argc != 9)
+	{
+		cout << "参数个数错误！";
+		return 1;
+	}
+	if ((argv[2][0]<'3'||argv[2][0]>'9')||(argv[4][0]<'0'||argv[4][0]>'9'))
+	{
+		cout << "输入值不合法！";
+		return 1;
+	}
+	if ((argv[1][1]!='m') || (argv[3][1]!='n'))
+	{
+		cout << "参数格式错误！";
+		return 1;
+	}
+	return 0;
 }
 void Read::input(int dimension, int num, string file_in)
 {
