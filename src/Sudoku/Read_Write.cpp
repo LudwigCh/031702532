@@ -44,23 +44,65 @@ bool Read::Check(int n, int key)
 		if (temp[count][i][col] == key)
 			return false;
 	}
-	if (dimen != 3 || dimen != 5 || dimen != 7)
+	if (dimen == 3 || dimen == 5 || dimen == 7)
 	{
-		
-		if (dimen == 4 || dimen == 9)
+		return true;
+	}
+	switch (dimen)
+	{
+	case 4: {
+		int x = n / 4 / 2 * 2;
+		int y = n % 4 / 2 * 2;
+		for (int i = x; i < x + 2; i++)
 		{
-			int x = n / dimen / int(sqrt(dimen)) * int(sqrt(dimen));
-			int y = n % dimen / int(sqrt(dimen)) * int(sqrt(dimen));
-			for (int i = x; i < x + int(sqrt(dimen)); i++)
+			for (int j = y; j < y + 2; j++)
 			{
-				for (int j = y; j < y + int(sqrt(dimen)); j++)
+				if (temp[count][i][j] == key)
+					return false;
+			}
+		}break;
+	}
+	case 6:{
+		int x = n / 6 / 2 * 2;
+		int y = n % 6 / 3 * 3;
+		for (int i = x; i < x + 2; i++)
+		{
+			for (int j = y; j < y + 3; j++)
+			{
+				if (temp[count][i][j] == key)
+					return false;
+			}
+		}break;
+	}
+	case 8:{
+		int x = n / 8 / 4 * 4;
+		int y = n % 8 / 2 * 2;
+		for (int i = x; i < x + 4; i++)
+		{
+			for (int j = y; j < y + 2; j++)
+			{
+				if (temp[count][i][j] == key)
+					return false;
+			}
+		}break;
+		
+		}
+		case 9: {
+			int x = n / 9 / 3 * 3;
+			int y = n % 9 / 3 * 3;
+			for (int i = x; i < x + 3; i++)
+			{
+				for (int j = y; j < y + 3; j++)
 				{
 					if (temp[count][i][j] == key)
 						return false;
 				}
-			}
+			}break;
 		}
 	}
+		
+
+	
 	return true;
 }
 void Read::equal(int dimension)
