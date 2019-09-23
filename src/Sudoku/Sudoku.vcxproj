@@ -18,6 +18,14 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Read.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Read.cpp" />
+    <ClCompile Include="Read_Write.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{DB3600E4-3FE0-4EAC-8CA2-EBCCD256C368}</ProjectGuid>
@@ -86,7 +94,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>Read.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>Read.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>Sudoku.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -117,14 +125,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Project1\Project1\Read.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Project1\Project1\main.cpp" />
-    <ClCompile Include="..\..\Project1\Project1\Read.cpp" />
-    <ClCompile Include="..\..\Project1\Project1\Read_Write.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

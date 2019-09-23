@@ -18,13 +18,13 @@ int main(int argc, char* argv[])
 	rd.input(dimension, num, file_in);
 	int jj = num;
 	while (jj--)
-	{		
+	{
 		rd.equal(dimension);
 		rd.DFS(0);
 		rd.add();
 	}
-	rd.output(file_out,num);
-	
+	rd.output(file_out, num);
+
 	return 0;
 
 }
